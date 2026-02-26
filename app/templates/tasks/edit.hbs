@@ -1,0 +1,17 @@
+{{page-title "Edit"}}
+
+| <LinkTo @route="tasks.show" @model={{@model}}>Show task</LinkTo>
+
+<h1>Edit a task status</h1>
+
+You can edit task {{@model.uri}} here.
+
+<form {{on "submit" this.save}}>
+  <label>title <Input @value={{@model.title}} /></label>
+  <label>status <Input @value={{@model.status}} /></label>
+  <button type="submit">Submit</button>
+</form>
+
+<button {{on "click" this.delete}} type="button">Delete</button>
+
+{{outlet}}
