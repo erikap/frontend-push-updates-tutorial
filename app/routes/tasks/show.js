@@ -1,6 +1,8 @@
 import Route from '@ember/routing/route';
 import { service } from '@ember/service';
+import monitorModelUri from 'ember-polling-push-updates/decorators/monitor-model-uri';
 
+@monitorModelUri
 export default class TasksShowRoute extends Route {
   @service store;
 
